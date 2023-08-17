@@ -4,8 +4,12 @@ const Form = () => {
 
     const [espectador, setEspectador] = useState({
         nombre: '',
-        pista: ''
+        pista: '',
+
     })
+
+    
+
     const [show, setShow] = useState(false)
     const [error, setError] = useState(false) 
 
@@ -23,7 +27,7 @@ const Form = () => {
   return (
     <div>
         <label>Nombre del espectador</label>
-        <input type="text" value={espectador.nombre}
+        <input type="text" value={espectador.nombre.trim(" ")}
             onChange={(event) => setEspectador({...espectador, nombre: event.target.value})}
         />
         <label>Nombre de la pista</label>
